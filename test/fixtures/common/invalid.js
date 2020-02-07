@@ -214,16 +214,22 @@ var APP;
 
 	global.APP = APP;
 
-	// eslint-disable-next-line valid-jsdoc
-	/** @returns {undefined} */
+	/* eslint-disable jsdoc/no-undefined-types */
+	/** @return {undefined} */
+	APP.start = function () {
+		return '@returns instead of @return';
+	};
+
+	/* eslint-disable jsdoc/check-tag-names, jsdoc/check-types */
+	/** @returns {Undefined} */
 	APP.stop = function () {
 		return '@returns instead of @return';
 	};
 
-	// eslint-disable-next-line valid-jsdoc
+	// eslint-disable-next-line jsdoc/check-alignment
 	/**
-	 * @param {number} a
-	 * @return {undefined}
+	* @param {number} a
+	  * @return {Undefined}
 	 */
 	APP.multiply = function ( a, b ) {
 		return a * b.undocumented;
@@ -232,7 +238,7 @@ var APP;
 	// eslint-disable-next-line no-prototype-builtins
 	APP.hasBarProperty = APP.hasOwnProperty( 'bar' );
 
-	/* eslint-disable valid-jsdoc */
+	/* eslint-disable jsdoc/check-types, jsdoc/check-alignment */
 	/**
 	 * @param {Boolean} a
 	 * @param {Number} b
@@ -274,7 +280,7 @@ var APP;
 	 * @yields
 	 */
 	APP.JSDocTags = function ( a, b ) { return a || b; };
-	/* eslint-enable max-statements-per-line */
-	/* eslint-enable valid-jsdoc */
+	/* eslint-enable max-statements-per-line, jsdoc/check-tag-names */
+	/* eslint-enable jsdoc/check-types, jsdoc/check-alignment, jsdoc/no-undefined-types */
 
 }( this ) );

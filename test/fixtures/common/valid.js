@@ -7,6 +7,15 @@
 // Rule: semi-style
 // Rule: prefer-numeric-literals
 // Rule: unicode-bom
+// Rule: jsdoc/check-alignment
+// Rule: jsdoc/check-indentation
+// Rule: jsdoc/check-param-names
+// Rule: jsdoc/check-property-names
+// Rule: jsdoc/check-tag-names
+// Rule: jsdoc/check-types
+// Rule: jsdoc/implements-on-classes
+// Rule: jsdoc/newline-after-description
+// Rule: jsdoc/valid-types
 ( function ( global ) {
 	var APP,
 		hasOwn = Object.prototype.hasOwnProperty,
@@ -30,7 +39,6 @@
 	 *
 	 * @class
 	 *
-	 * @constructor
 	 * @param {string} id
 	 * @param {Object} options
 	 */
@@ -235,7 +243,7 @@
 	 * @param {Date} i
 	 * @param {RegExp} j
 	 * @return {Error}
-	*/
+	 */
 	APP.JSDocTypes = function ( a, b, c, d, e, f, g, h, i, j ) {
 		return a || b || c || d || e || f || g || h || i || j;
 	};
@@ -247,7 +255,6 @@
 	 * @abstract
 	 * @extends String
 	 * @class
-	 * @constructor
 	 * @constructs
 	 * @const
 	 * @default
@@ -255,7 +262,7 @@
 	 * @external String
 	 * @file Description.
 	 * @fires Event
-	 * @func
+	 * @function
 	 * @method
 	 * @member
 	 * @param {number} a

@@ -2,7 +2,50 @@
   "extends": "eslint:recommended",
   "env": {},
   "globals": {},
-  "plugins": [ "json" ],
+
+  "plugins": [
+    "jsdoc",
+    "json"
+  ],
+  "settings": {
+    "jsdoc": {
+      "tagNamePreference": {
+        "arg": "param",
+        "argument": "param",
+        "augments": "extends",
+        "constant": "const",
+        "defaultvalue": "default",
+        "description": "desc",
+        "emits": "fires",
+        "exception": "throws",
+        "fileoverview": "file",
+        "func": "function",
+        "function": "method",
+        "host": "external",
+        "linkcode": "link",
+        "linkplain": "link",
+        "overview": "file",
+        "prop": "property",
+        "returns": "return",
+        "var": "member",
+        "virtual": "abstract",
+        "yields": "yield"
+      },
+      "preferredTypes": {
+        "array": "Array",
+        "Boolean": "boolean",
+        "date": "Date",
+        "error": "Error",
+        "function": "Function",
+        "Null": "null",
+        "Number": "number",
+        "object": "Object",
+        "regexp": "RegExp",
+        "String": "string",
+        "Undefined": "undefined"
+      }
+    }
+  },
   "reportUnusedDisableDirectives": true,
   "rules": {
     "array-bracket-spacing": [ "error", "always" ],
@@ -96,45 +139,17 @@
     "spaced-comment": [ "error", "always", { "exceptions": [ "*", "!" ] } ],
     "switch-colon-spacing": [ "error", { "after": true, "before": false } ],
     "unicode-bom": [ "error" ],
-    "valid-jsdoc": [ "error", {
-      "requireParamDescription": false,
-      "requireReturnDescription": false,
-      "requireReturn": false,
-      "prefer": {
-        "virtual": "abstract",
-        "augments": "extends",
-        "constant": "const",
-        "defaultvalue": "default",
-        "description": "desc",
-        "host": "external",
-        "fileoverview": "file",
-        "overview": "file",
-        "emits": "fires",
-        "function": "func",
-        "var": "member",
-        "arg": "param",
-        "argument": "param",
-        "prop": "property",
-        "returns": "return",
-        "exception": "throws",
-        "yields": "yield",
-        "linkcode": "link",
-        "linkplain": "link"
-      },
-      "preferType": {
-        "Boolean": "boolean",
-        "Number": "number",
-        "String": "string",
-        "Undefined": "undefined",
-        "Null": "null",
-        "object": "Object",
-        "array": "Array",
-        "function": "Function",
-        "date": "Date",
-        "regexp": "RegExp",
-        "error": "Error"
-      }
-    } ],
+    "valid-jsdoc": [ "off" ],
+    "jsdoc/check-alignment": "error",
+    "jsdoc/check-indentation": "error",
+    "jsdoc/check-param-names": "error",
+    "jsdoc/check-property-names": "error",
+    "jsdoc/check-tag-names": "error",
+    "jsdoc/check-types": "error",
+    "jsdoc/implements-on-classes": "error",
+    "jsdoc/newline-after-description": "warn",
+    "jsdoc/no-undefined-types": "error",
+    "jsdoc/valid-types": "error",
     "vars-on-top": "error",
     "wrap-iife": "error",
     "yoda": [ "error", "never" ]
